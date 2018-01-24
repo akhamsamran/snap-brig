@@ -7,39 +7,53 @@
 $crimes = ["larceny","embezzlement", "praising Comcast", "tampering with replicators", "vehicular manslaughter"];
 $prisoners = ["Brent", "Miguel", "Nat"];
  **/
+function throwInBrig() {
+	$crimes["larceny","embezzlement", "praising Comcast", "tampering with replicators", "vehicular manslaughter"];
+	$prisoners:["Brent", "Miguel", "Nat"];
+	$conviction = $crimes[array_rand($crimes)];
+	$perpetrator = $prisoners[random_int(0, count($prisoners) - 1)];
+	echo "Mr. Worf, throw $perpetrator in the brig for $conviction!" . PHP_EOL;
+	$solitaryCell = new \stdClass();
+	}
+	throwInBrig();
+
+
+
+
 
 /**
- * @return string
- */
-public function getCrime(): string {
-	return ($this->crime);
-}
 /**
  * @return string
  */
-public function getPrisoner(): string{
-	return ($this->prisoner);
-}
+//public function getCrime(): string {
+//	return ($this->crime);
+//}
+/**
+ * @return string
+ */
+//public function getPrisoner(): string{
+//	return ($this->prisoner);
+//}
 /**
  * @param int $crime
  */
-public function setCrime($crime): void {
-	$this->crime = $crime;
+//public function setCrime($crime): void {
+//	$this->crime = $crime;
 }
 /**
  * @param int $prisoner
  */
-public function setPrisoner($prisoner): void {
-	$this->prisoner = $prisoner;
-}
-}
+//public function setPrisoner($prisoner): void {
+//	$this->prisoner = $prisoner;
+//}
+//}
 /**
  * @param int $randomCrime
  **/
-public function setRandomCrime($randomCrime) : void {
-	$this->randomCrime = $randomCrime;
+//public function setRandomCrime($randomCrime) : void {
+//	$this->randomCrime = $randomCrime;
 
-
+/**
 $a=array("larceny","embezzelment","praising Comcast","tampering with replicators","vehicular manslaughter");
 $random_keys=array_rand($a,5);
 echo $a[$random_keys[0]]."<br>";
@@ -53,15 +67,15 @@ $b=array("Brent","Miguel","Nat");
 	echo $b[$random_keys[0]]."<br>";
 	echo $b[$random_keys[1]]."<br>";
 	echo $b[$random_keys[2]];
+**/
 
 
-
-
+/**
 $charge = new charge();
 $chargeCrime = $charge->getCrime();
 $chargePrisoner = $charge->getPrisoner();
 echo ("throw " . $chargePrisoner . " in the brig for " . $chargeCrime ." !");
-
+**/
 
 
 ?>
