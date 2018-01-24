@@ -40,18 +40,12 @@ public function setPrisoner($prisoner): void {
 }
 }
 /**
- * @param int $randomNumber
+ * @param int $randomCrime
  **/
-public function setRandomNumber($randomNumber) : void {
-	$this->randomNumber = $randomNumber;
+public function setRandomCrime($randomCrime) : void {
+	$this->randomCrime = $randomCrime;
 
-	public function setRandomNumber($randomNumber) : void {
-		try { $min=1;
-			$max=5;
-			echo rand($min,$max);
-		}
-	}
-}
+
 $a=array("larceny","embezzelment","praising Comcast","tampering with replicators","vehicular manslaughter");
 $random_keys=array_rand($a,5);
 echo $a[$random_keys[0]]."<br>";
@@ -60,44 +54,19 @@ echo $a[$random_keys[2]]."<br>";
 echo $a[$random_keys[3]]."<br>";
 echo $a[$random_keys[4]];
 
-//mixed array_rand ( array $array [, int $num = 1 ] )
-//$randomNumber = echo(rand(0,4));
-//let eightBall = '';
-/*switch(randomNumber) {
-	case 0:
-		eightBall = 'it is certain';
-		break;
-	case 1:
-		eightBall = 'it is decidedly so';
-		break;
-	case 3:
-		eightBall = 'Reply hazy try again';
-		break;
-	case 4:
-		eightBall = 'Cannot predict now';
-		break;
-	case 5:
-		eightBall = "Don't count on it";
-		break;
-	case 6:
-		eightBall = 'My sources say no';
-		break;
-	case 7 :
-		eightBall = 'Outlook not so good';
-		break;
-	case 8 :
-		eightBall = 'Signs point to yes';
-		break;
-}
-console.log('The user asked: '+userQuestion);
-console.log('The eight ball answered: '+eightBall);
-**/
+$b=array("Brent","Miguel","Nat");
+	$random_keys=array_rand($a,5);
+	echo $b[$random_keys[0]]."<br>";
+	echo $b[$random_keys[1]]."<br>";
+	echo $b[$random_keys[2]];
+
+
 
 
 $charge = new charge();
 $chargeCrime = $charge->getCrime();
 $chargePrisoner = $charge->getPrisoner();
-echo ($chargeCrime ." " . $chargePrisoner);
+echo ("throw " . $chargePrisoner . " in the brig for " . $chargeCrime ." !");
 
 
 
