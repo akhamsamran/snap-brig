@@ -8,12 +8,6 @@ $crimes = ["larceny","embezzlement", "praising Comcast", "tampering with replica
 $prisoners = ["Brent", "Miguel", "Nat"];
  **/
 
-echo(rand() . "<br>");
-echo(rand() . "<br>");
-echo(rand(0,5));
-
-
-
 /**
  * @return string
  */
