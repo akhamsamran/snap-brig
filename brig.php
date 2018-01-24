@@ -8,20 +8,33 @@ $crimes = ["larceny","embezzlement", "praising Comcast", "tampering with replica
 $prisoners = ["Brent", "Miguel", "Nat"];
  **/
 function throwInBrig() {
-	$crimes["larceny","embezzlement", "praising Comcast", "tampering with replicators", "vehicular manslaughter"];
-	$prisoners:["Brent", "Miguel", "Nat"];
+	$crimes = ["dividing by zero","larceny","embezzlement", "praising Comcast", "tampering with replicators", "vehicular manslaughter"];
+	$prisoners = ["Brent", "Miguel", "Nat"];
 	$conviction = $crimes[array_rand($crimes)];
 	$perpetrator = $prisoners[random_int(0, count($prisoners) - 1)];
 	echo "Mr. Worf, throw $perpetrator in the brig for $conviction!" . PHP_EOL;
 	$solitaryCell = new \stdClass();
+	$solitaryCell->conviction = $conviction;
+	$solitaryCell->perpetrator = $perpetrator;
+	return($solitaryCell);
 	}
-	throwInBrig();
+	$solitaryCell = throwInBrig();
+	var_dump($solitaryCell);
+	?>
 
-
-
-
+/**result:
+*Mr. Worf, throw Brent in the brig for embezzlement!
+*object(stdClass)#1 (2) {
+*["conviction"]=>
+*string(12) "embezzlement"
+*["perpetrator"]=>
+*string(5) "Brent"
+*}
+**/
 
 /**
+ * my attempts:
+ **/
 /**
  * @return string
  */
@@ -76,6 +89,3 @@ $chargeCrime = $charge->getCrime();
 $chargePrisoner = $charge->getPrisoner();
 echo ("throw " . $chargePrisoner . " in the brig for " . $chargeCrime ." !");
 **/
-
-
-?>
